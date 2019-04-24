@@ -1,0 +1,139 @@
+.head {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(243, 129, 129, 0.8)),
+      to(rgba(252, 227, 138, 0.8))
+    ),
+    url(../images/jpg/eagle-background.jpg);
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(243, 129, 129, 0.8),
+      rgba(252, 227, 138, 0.8)
+    ),
+    url(../images/jpg/eagle-background.jpg);
+  background-image: -o-linear-gradient(
+      top,
+      rgba(243, 129, 129, 0.8),
+      rgba(252, 227, 138, 0.8)
+    ),
+    url(../images/jpg/eagle-background.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(243, 129, 129, 0.8),
+      rgba(252, 227, 138, 0.8)
+    ),
+    url(../images/jpg/eagle-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  overflow: hidden;
+  margin-bottom: 96px;
+  background-size: cover;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav {
+  @extend %flex-center;
+  @extend %flex-align-baseline;
+  padding-top: 30px;
+  margin-bottom: 150px;
+
+  &__list {
+    @extend %flex-center;
+    @extend %flex-align-center;
+    width: 625px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    @extend %flex;
+  }
+
+  &__link {
+    color: $white;
+    font-family: $font-m;
+    font-weight: 500;
+
+    &:hover {
+      color: $yellow;
+      @include trans-color(color 0.2s linear);
+
+      &:hover::after {
+        background-color: $yellow;
+        width: 100%;
+        @include trans-width(width 0.2s linear);
+      }
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      height: 2px;
+      margin-top: 8px;
+      width: 0;
+    }
+  }
+
+  &__link-socials {
+    @extend %flex;
+    @extend %flex-justify-content;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.head {
+  &__icons {
+    fill: $white;
+    width: 20px;
+    height: 20px;
+
+    &:hover {
+      fill: $yellow;
+      @include trans-fill(fill 0.3s linear);
+    }
+  }
+
+  &__subtitle {
+    font-size: 72px;
+    @extend %reset;
+    font-family: $font-k;
+    font-weight: 400;
+    color: $white;
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    font-size: 150px;
+    @extend %reset;
+    font-family: $font-m;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $white;
+    line-height: 0.933;
+  }
+
+  &__title--down {
+    margin-bottom: 124px;
+    margin-left: 25px;
+  }
+}
+
+.btn--head {
+  font-style: 14px;
+  font-family: $font-m;
+  font-weight: 700;
+  border: 3px solid $white;
+  background-color: transparent;
+  color: $white;
+  text-transform: uppercase;
+  padding: 10px 30px;
+}

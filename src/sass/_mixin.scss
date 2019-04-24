@@ -1,0 +1,47 @@
+@mixin trans-color($what: color, $long: 0.2s, $how: linear) {
+  -webkit-transition: $what $long $how;
+  -o-transition: $what $long $how;
+  transition: $what $long $how;
+}
+
+@mixin trans-width($what: width, $long: 0.2s, $how: linear) {
+  -webkit-transition: $what $long $how;
+  -o-transition: $what $long $how;
+  transition: $what $long $how;
+}
+
+@mixin trans-fill($what: fill, $long: 0.2s, $how: linear) {
+  -webkit-transition: $what $long $how;
+  -o-transition: $what $long $how;
+  transition: $what $long $how;
+}
+
+@mixin trans-opacity($what: opacity, $long: 0.2s, $how: linear) {
+  -webkit-transition: $what $long $how;
+  -o-transition: $what $long $how;
+  transition: $what $long $how;
+}
+
+@mixin trans-bgc($what: background-color, $long: 0.2s, $how: linear) {
+  -webkit-transition: $what $long $how;
+  -o-transition: $what $long $how;
+  transition: $what $long $how;
+}
+
+@mixin footer-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  
+  &:-moz-placeholder {
+    @content;
+  }
+  
+  &::-moz-placeholder {
+    @content;
+  }
+  
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
